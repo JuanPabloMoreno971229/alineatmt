@@ -1927,14 +1927,12 @@ body {
 
 .menu-bar {
   cursor: pointer;
-  
-  
 }
 
 
 .menu-bar span {
   color: #fff;
-  font-size: 24px;
+  font-size: 30px;
 }
 
 .main-menubar {
@@ -1967,7 +1965,7 @@ nav {
   }
 
   nav a:hover {
-    color: #F2B632;
+    color: #0000;
   }
 }
 
@@ -1976,8 +1974,8 @@ nav.hide {
 }
 
 nav a {
-  color: #fff;
-  font-size: 12px;
+  color: #ffff;
+  font-size: 25px;
   font-weight: 500;
   text-transform: uppercase;
   margin: 0 25px;
@@ -1992,7 +1990,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #F2B632;
+  color: #7F7F7F;
 }
 
 .carousel-item {
@@ -2877,7 +2875,59 @@ h6 {
   transition: all 1s;
 }
 
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.animate-up li {
+  opacity: 0;
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+/* Agregar una clase específica para controlar la animación de entrada */
+.animate-up.show li {
+  opacity: 1;
+  animation: none;
+}
 .visible {
   opacity: 1;
   transform: translate(0, 0);
+}
+
+.modal-content {
+  background: none;
+  border: none;
+}
+
+.larger-text {
+  font-size: 20px; /* ajusta el tamaño según sea necesario */
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #C4BD97;
+  color: white;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.overlay:hover {
+  opacity: 0.8;
+}
+
+.description {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 14px; /* ajusta el tamaño según sea necesario */
 }
