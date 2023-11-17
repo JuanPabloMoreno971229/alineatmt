@@ -9,8 +9,6 @@ class CaruselLanding(models.Model):
     image = models.ImageField(verbose_name="Imagen", upload_to="Carrusel")
     text = models.CharField(verbose_name="Texto", max_length=200, blank=True)
     image_title = models.ImageField(verbose_name="Imagen de titulo", upload_to="Carrusel", blank=True)
-    width = models.CharField(verbose_name="Ancho", max_length=20)
-    height = models.CharField(verbose_name="Alto", max_length=20)
     created = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de creación")
     updated = models.DateTimeField(auto_now=True, verbose_name="Fecha de edición")
 
