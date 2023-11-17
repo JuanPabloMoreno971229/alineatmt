@@ -15,7 +15,7 @@ class CaruselLanding(models.Model):
     class Meta:
         verbose_name = "Imagen del carrusel"
         verbose_name_plural = "Imagenes del carrusel"
-        ordering = ['created']
+        ordering = ['id']
 
     def __str__(self):
         return self.title
