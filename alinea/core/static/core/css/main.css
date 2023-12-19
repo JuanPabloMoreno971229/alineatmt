@@ -1922,7 +1922,8 @@ body {
   left: 0;
   width: 100%;
   z-index: 9;
-  border-bottom: 1px solid white;
+  border-bottom: 2.5px solid white;
+  background: #000;
 }
 
 .menu-bar {
@@ -1971,6 +1972,12 @@ nav {
 
 nav.hide {
   transform: scale(0);
+}
+.header-top.d-flex.justify-content-between.align-items-center{
+  width: 1500px;
+}
+.container-header{
+  width: 5500px;
 }
 
 nav a {
