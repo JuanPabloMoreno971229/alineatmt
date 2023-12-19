@@ -42,12 +42,11 @@
 							<a href="#home"><img width="140" height="70" src="{% static 'core/img/alinea.png' %}" alt=""></a>
 						</div>
 						<div class="main-menubar d-flex align-items-center selector-de-tu-elemento">
-							<nav >
+							<nav class="ml-auto"> <!-- Agregando la clase ml-auto aquí -->
 								<a href="#home">Nosotros</a>
 								<a href="#about">Proyectos</a>
 								<a href="#gallery">Contacto</a>							
 							</nav>
-							
 						</div>
 					</div>
 				</div>
@@ -84,13 +83,13 @@
 		<!-- End banner Area -->	
 		<!-- Start About Area -->
 		<section class="About-area section-gap content gray" id="about" style="background-image: url('{% static 'core/img/que-es-fondo.png' %}'); background-size: cover; padding: 0; height: 1060px;">
-			<div class="container scroll-content fadeRight">
-				<div class="row d-flex align-items-center" style="justify-content: flex-end; align-items: flex-end; min-height: 100vh;">
+			<div class="container scroll-content fadeRight" style="position: relative;">
+				<p class="intro-text" style="position: absolute; top: 250px; left: 300px; color: #ffff; font-size: 35px; line-height: 1;">Somos una firma dedicada al desarrollo de proyectos inmobiliarios, con actividades específicas de:</p>
+				<div class="row d-flex align-items-center justify-content-center" style="min-height: 100vh; position: absolute; top: 60px; left: 220px;">
 					<div class="col-lg-6 about-right">
-						<p class="intro-text" style="color: white; font-size: 24px; margin-bottom: 30px;">Somos una firma dedicada al desarrollo de proyectos inmobiliarios, con actividades específicas de: </p>
-						<ul class="selector-de-tu-elemento animate-up" style="list-style-type: disc; color: white; font-size: 50px;">
+						<ul class="selector-de-tu-elemento animate-up" style="list-style-type: disc; color: white; font-size: 50px; margin-top: 30px; position: relative;">
 							{% for what in what %}
-								<li style="margin-bottom: 50px; color: inherit; font-size: inherit;">{{what.title}}</li>
+								<li style="margin-bottom: 50px; color: inherit; font-size: inherit; margin-left: 15px;">{{what.title}}</li>
 							{% endfor %}
 						</ul>
 					</div>

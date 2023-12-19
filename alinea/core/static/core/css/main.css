@@ -1978,7 +1978,7 @@ nav a {
   font-size: 25px;
   font-weight: 500;
   text-transform: uppercase;
-  margin: 0 25px;
+  margin: 0 10px;
   display: inline-block;
 }
 
@@ -2934,3 +2934,7 @@ h6 {
 
 
 /*Holaaaa*/
+.container.scroll-content.fadeRight {
+  width: 1000000000000px; /* Puedes ajustar el valor según tus necesidades */
+  height: 150px;
+}
