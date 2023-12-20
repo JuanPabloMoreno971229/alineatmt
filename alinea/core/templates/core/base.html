@@ -16,7 +16,6 @@
 	<meta charset="UTF-8">
 	<!-- Site Title -->
 	<title>Alinea</title>
-
 	<!-- <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">  -->
 		<!--
 		CSS
@@ -35,11 +34,11 @@
 	<body>
 		<!-- Start Header Area -->
 		<header class="default-header">
-			<div class="container container-header">
+			<div class="container" >
 				<div class="header-wrap">
 					<div class="header-top d-flex justify-content-between align-items-center">
 						<div class="logo">
-							<a href="#home"><img width="140" height="70" src="{% static 'core/img/alinea.png' %}" alt=""></a>
+							<a href="#home"><img width="140" height="70" src="{% static 'core/img/alinea.png' %}" alt="Alinea"></a>
 						</div>
 						<div class="main-menubar d-flex align-items-center selector-de-tu-elemento">
 							<nav class="ml-auto"> <!-- Agregando la clase ml-auto aquí -->
@@ -82,32 +81,28 @@
 		</section>
 		<!-- End banner Area -->	
 		<!-- Start About Area -->
-		<section class="About-area section-gap content gray" id="about" style="background-image: url('{% static 'core/img/que-es-fondo.png' %}'); background-size: cover; padding: 0; height: 1060px;">
-			<div class="container scroll-content fadeRight" style="position: relative;">
-				<p class="intro-text" style="position: absolute; top: 250px; left: 300px; color: #ffff; font-size: 35px; line-height: 1;">Somos una firma dedicada al desarrollo de proyectos inmobiliarios, con actividades específicas de:</p>
-				<div class="row d-flex align-items-center justify-content-center" style="min-height: 100vh; position: absolute; top: 60px; left: 220px;">
+		<section class="About-area section-gap content gray" id="about" style="background-image: url('{% static 'core/img/que-es-fondo.png' %}'); background-size: cover; padding: 0; height: 750px;">
+			<div class="container scroll-content fadeRight" style="position: relative;  width: 800px; left: 200px;" >
+				<p class="intro-text" style="position: absolute; top: 100px; left: 0px; color: #ffff; font-size: 30px; line-height: 1;">Somos una firma dedicada al desarrollo de proyectos inmobiliarios, con actividades específicas de:</p>
+				<div class="row d-flex align-items-center justify-content-center" style="min-height: 100vh; position: absolute; top: 60px; left: 0px;">
 					<div class="col-lg-6 about-right">
-						<ul class="selector-de-tu-elemento animate-up" style="list-style-type: disc; color: white; font-size: 50px; margin-top: 30px; position: relative;">
+						<ul class="selector-de-tu-elemento animate-up" style="list-style-type: disc; color: white; font-size: 40px; margin-bottom: 160px; position: relative;">
 							{% for what in what %}
-								<li style="margin-bottom: 50px; color: inherit; font-size: inherit; margin-left: 15px;">{{what.title}}</li>
+								<li style="margin-bottom: 30px; color: inherit; font-size: inherit; margin-left: 0px;">{{what.title}}</li>
 							{% endfor %}
 						</ul>
 					</div>
 				</div>
 			</div>
 		</section>
-		<section class="About-area section-gap" id="about" style="background-color: #FF5733; background-image: url('{% static 'core/img/que-hace-fondo.png' %}'); background-size: cover; padding: 0; height: 1060px;">
-			<div class="container">
-				<div class="row justify-content-end align-items-center" style="height: 100vh;">
-					<div class="col-md-6 text-right" style="margin-right: 20px !important;">
-						{% for how in how %}
-							<p class="selector-de-tu-elemento" style="position: absolute; top: 250px; left: 300px; color: #ffff; font-size: 35px; line-height: 1;">{{how.text}}</p>
-						{% endfor %}
-					</div>
-				</div>
+		<section class="About-area section-gap" id="about" style="background-color: #FF5733; background-image: url('{% static 'core/img/que-hace-fondo.png' %}'); background-size: cover; padding: 0; height: 750px;">
+			<div class="container scroll-content fadeRight" style="position: relative;">
+				{% for how in how %}
+					<p class="intro-text" style="position: absolute; top: 390px; left: 500px; color: #ffff; font-size: 40px; line-height: 1.5;">{{how.text}}</p>
+				{% endfor %}
 			</div>
 		</section>
-		<section class="About-area section-gap" id="about" style="text-align: center; height: 1000px;">
+		<section class="About-area section-gap" id="about" style="text-align: center; height: 750px;">
 			<table style="width: 90%; margin: 0 auto; border-collapse: separate; border-spacing: 100px;">
 				<tr>
 				{% for logos in logos %}
@@ -121,52 +116,56 @@
 				</tr>
 			</table>
 		</section>
-		<section class="grid-section gallery-area section-gap" style="background-color: #7F7F7F;">
-    <div class="table-container gal">
-        <table class="responsive-table">
-            <tr>
-                <td>
-                    <div class="image-container">
-                        <a href="#projectModal" data-toggle="modal" data-target="#projectModal" data-projectid="{{ projects.0.id }}">
-                            <img src="{{ projects.0.images.first.image.url }}" alt="Imagen 1">
-                            <div class="overlay" data-toggle="modal" data-target="#projectModal" data-projectid="{{ projects.0.id }}">
-                                <p class="description larger-text">{{ projects.0.information|linebreaks }}</p>
-                            </div>
-                        </a>
-                    </div>
-                </td>
-                <td>
-                    <div class="image-container">
-                        <a href="#projectModal" data-toggle="modal" data-target="#projectModal" data-projectid="{{ projects.1.id }}">
-                            <img src="{{ projects.1.images.first.image.url }}" alt="Imagen 2">
-                            <div class="overlay" data-toggle="modal" data-target="#projectModal" data-projectid="{{ projects.1.id }}">
-                                <p class="description">{{ projects.1.information|linebreaks }}</p>
-                            </div>
-                        </a>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="image-container">
-                        <a href="https://www.kassa129.com/" target="_blank">
-                            <img src="{{ projects.2.images.first.image.url }}" alt="Imagen 3">
-                            <div class="overlay">
-                                <p class="description">{{ projects.2.information|linebreaks }}</p>
-                            </div>
-                        </a>
-                    </div>
-                </td>
-                <td>
-                    <div class="image-container">
-                        <img src="{% static 'core/img/fondo.png' %}" alt="Imagen 4">
-                    </div>
-                </td>
-            </tr>
-        </table>
-    </div>
-</section>
+		<section class="grid-section gallery-area section-gap" style="background-color: #7F7F7F; position: relative;">
+			<div class="table-container gal">
+				<table class="responsive-table">
+					<tr>
+						<td>
+							<div class="image-container">
+								<a href="#projectModal" data-toggle="modal" data-target="#projectModal" data-projectid="{{ projects.0.id }}">
+									<img src="{{ projects.0.images.first.image.url }}" alt="Imagen 1">
+									<div class="overlay" data-toggle="modal" data-target="#projectModal" data-projectid="{{ projects.0.id }}">
+										<p class="description larger-text">{{ projects.0.information|linebreaks }}</p>
+									</div>
+								</a>
+							</div>
+						</td>
+						<td>
+							<div class="image-container">
+								<a href="#projectModal" data-toggle="modal" data-target="#projectModal" data-projectid="{{ projects.1.id }}">
+									<img src="{{ projects.1.images.first.image.url }}" alt="Imagen 2">
+									<div class="overlay" data-toggle="modal" data-target="#projectModal" data-projectid="{{ projects.1.id }}">
+										<p class="description">{{ projects.1.information|linebreaks }}</p>
+									</div>
+								</a>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="image-container">
+								<a href="https://www.kassa129.com/" target="_blank">
+									<img src="{{ projects.2.images.first.image.url }}" alt="Imagen 3">
+									<div class="overlay">
+										<p class="description">{{ projects.2.information|linebreaks }}</p>
+									</div>
+								</a>
+							</div>
+						</td>
+						<td>
+							<div class="image-container">
+								<img src="{% static 'core/img/fondo.png' %}" alt="Imagen 4">
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
 
+			<!-- Título de Proyecto en la parte inferior izquierda -->
+			<div class="project-title" style="position: absolute; bottom: 20px; left: 20px; text-align: left; color: #fff; z-index: 1;">
+				<h2 style="font-size: 120px; margin-bottom: 10px; color: #ffff;">PROYECTOS.</h2>
+			</div>
+		</section>
 		<!-- Modal para mostrar las imágenes del proyecto -->
 		<div class="modal fade" id="projectModal" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered modal-lg" style="max-width: 60%; max-height: 60vh;">

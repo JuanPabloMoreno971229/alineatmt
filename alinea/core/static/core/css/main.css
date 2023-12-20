@@ -1918,12 +1918,11 @@ body {
 .default-header {
   padding: 0;
   position: absolute;
-  top: 0;
+  top: 15px;
   left: 0;
   width: 100%;
   z-index: 9;
   border-bottom: 2.5px solid white;
-  background: #000;
 }
 
 .menu-bar {
@@ -1974,18 +1973,15 @@ nav.hide {
   transform: scale(0);
 }
 .header-top.d-flex.justify-content-between.align-items-center{
-  width: 1500px;
-}
-.container-header{
-  width: 5500px;
+  width: 1300px;
 }
 
 nav a {
   color: #ffff;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 500;
   text-transform: uppercase;
-  margin: 0 10px;
+  margin: 0 50px;
   display: inline-block;
 }
 
@@ -2691,7 +2687,7 @@ h6 {
 }
 
 .table-container {
-  max-width: 50%; /* Ancho máximo de la tabla */
+  max-width: 40%; /* Ancho máximo de la tabla */
   margin-right: 20px;
 }
 
@@ -2736,8 +2732,8 @@ h6 {
 }
 
 .responsive-table img {
-  width: 300px; /* Ancho fijo deseado */
-  height: 300px; /* Alto fijo deseado */
+  width: 250px; /* Ancho fijo deseado */
+  height: 250px; /* Alto fijo deseado */
   display: block;
   object-fit: cover; /* Ajusta la imagen manteniendo su relación de aspecto y recortándola si es necesario */
 }
@@ -2940,8 +2936,13 @@ h6 {
 }
 
 
-/*Holaaaa*/
-.container.scroll-content.fadeRight {
-  width: 1000000000000px; /* Puedes ajustar el valor según tus necesidades */
-  height: 150px;
+.modal-backdrop {
+  background-color: rgba(0, 0, 0); /* Cambia el color de fondo y la opacidad según tus preferencias */
 }
+
+.modal.fade.show {
+  background-color: rgba(0, 0, 0); /* Ajusta la opacidad del modal */
+}
+
+
+            
